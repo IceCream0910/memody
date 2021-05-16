@@ -27,14 +27,57 @@
     <br>
     <Br>
     <div id="list-container">
-        <h6 style="color:#a9a9a9;">아직 개발중인 기능이에요 :(<br>곧 사용하실 수 있도록 열심히 개발하겠습니다</h6>
-        <div class="subject-container">
+        <h6 style="color:#a9a9a9;">암기 확인 설정</h6>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input quizRandom" id="customSwitches">
+            <label class="custom-control-label" for="customSwitches">암기 카드 순서 랜덤으로 표시</label>
         </div>
+        <hr>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input isFirstAns" id="customSwitches2">
+            <label class="custom-control-label" for="customSwitches2" id="isFirstAnsDes">현재설정 : 질문 보고 정답 맞히기</label>
+        </div>
+        <br><br>
+        <h6 style="color:#a9a9a9;">앱 정보</h6>
+        <button type="button" class="btn btn-light">오픈소스 라이선스</button>
+
+        <br><br>
+
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteConfirm-modal">데이터 초기화</button>
+
 
     </div>
 
 
+
+    <!-- 데이터 삭제 확인 Modal -->
+    <div class="modal fade modal-bottom" id="deleteConfirm-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h3 style="margin:20px;margin-bottom:0;">데이터 삭제</h3>
+                <div class="modal-body py-5" style="margin-top:-20px;">
+                    <!-- modal body -->
+                    <h6>정말 모든 데이터를 삭제할거야? 삭제한 데이터는 복원할 수 없어. 삭제하려면 아래에 '삭제'라고 입력하고 삭제 버튼을 눌러줘.
+                    </h6>
+                    <div class="input-group">
+                        <input type="text" name="dday-title-input" class="form-control" id="delConfirm" placeholder="여기에 확인 메시지 입력" aria-label="디데이 제목을 입력해줘">
+                    </div>
+
+                    <span id="error" style="display:none;"><br>삭제 확인 메시지가 올바르지 않아 :(</span>
+                    <!-- modal body -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-block col" data-dismiss="modal" style="margin-top:7px;">취소</button>
+                    <button type="button" class="btn btn-danger btn-block col" onclick="javascript:deleteConfirm();">삭제</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 데이터 삭제 확인 Modal -->
+
 </body>
 
+
+<script src="src/settings.js"></script>
 
 </html>

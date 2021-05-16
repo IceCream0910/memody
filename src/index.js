@@ -181,3 +181,7 @@ function deleteList(index) {
 function openList(title) { //제목 클릭 > 링크 이동
     window.open('subject.html?title=' + title);
 }
+
+function refreshPage() {
+    location.reload();
+}

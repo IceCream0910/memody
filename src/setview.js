@@ -14,7 +14,7 @@ function create2DArray(rows, columns) { //2차원 배열 생성 함수 e.g.)crea
     return arr;
 }
 
-var cardsList = create2DArray(0, 3);
+var cardsList = create2DArray(0, 4);
 
 
 function init() {
@@ -46,13 +46,23 @@ function init() {
                     statusText = "알 수 없음"
                     break;
             }
-            $('.cards-container').append('<div class="listCard"><span style="' + statusTag + '">' + statusText + '</span><br><span>질문</span> <h4 id="card-q">' + cardsList[i][0] + '</h4> <span>정답</span> <h4 id="card-a">' + cardsList[i][1] + '</h4><a class="card-more"data-toggle="modal" data-target="#editList-modal" href="javascript:openListEditor(' + i + ');"><ion-icon name="ellipsis-vertical-outline" id="more-btn"  onclick="javascript:openListEditor(' + i + ');"></ion-icon></a>  </div>');
+            $('.cards-container').append('<div class="listCard" onclick="javascript:ansToggle(this);"><span style="' + statusTag + '">' + statusText + '</span><br><span>질문</span> <h4 id="card-q">' + cardsList[i][0] + '</h4><div class="ans-view" style="display:none;"><span>정답</span> <h4 id="card-a">' + cardsList[i][1] + '</h4></div><a class="card-more"data-toggle="modal" data-target="#editList-modal" href="javascript:openListEditor(' + i + ');"><ion-icon name="ellipsis-vertical-outline" id="more-btn"  onclick="javascript:openListEditor(' + i + ');"></ion-icon></a>  </div>');
 
         }
     }
 }
 
 init();
+
+function ansToggle(e) {
+    var target = $(e).children('.ans-view');
+    if (target.is(':visible')) {
+        target.hide();
+    } else {
+        target.show();
+    }
+
+}
 
 function getParam(sname) {
     var params = location.search.substr(location.search.indexOf("?") + 1);
@@ -76,7 +86,7 @@ function addList() { // 추가(저장) 버튼 클릭
         }, 3000);
 
     } else {
-        var temp = [cardsQInput.val().toString(), cardsAInput.val().toString(), "0"];
+        var temp = [cardsQInput.val().toString(), cardsAInput.val().toString(), "0", cardsList.length + 1]; //[질문, 정답, 암기상태(0, 1, 2), 문제번호(1부터)]
         cardsList.push(temp);
         cardsQInput.val('');
         cardsAInput.val('');
@@ -139,4 +149,8 @@ function deleteList(index) {
 function playQuiz() {
     window.open('memorize.html?category=' + categoryTitle + '&subject=' + subjectTitle);
 
+}
+
+function refreshPage() {
+    location.reload();
 }
