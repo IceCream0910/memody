@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>공지사항</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    </div>
+</head>
+
+<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+    <div class="container">
+        <div class="accordion">
+            <div class="accordion-item">
+                <button id="accordion-button" aria-expanded="false"><span class="accordion-title">암기 학습 TTS 기능 이용 안내</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>안녕하세요. 당신의 암기 메이트, memody 개발자입니다.<br>암기 학습 시 문제를 소리로 읽어주는 TTS 기능 이용과 관련해 안내드립니다.<br>
+                        <Br> 메모디는 기기 자체의 TTS(음성합성) 엔진을 사용합니다. 따라서 사용중이신 단말과 개인 설정에 따라 목소리가 다를 수 있습니다.<br><br>*삼성전자 스마트폰의 경우 기본엔진을 삼성 TTS 엔진으로 설정한 뒤, 기본 엔진 우측 설정 버튼을 누른 후 음성 데이터 설치에서 영어 (여성 고음질)이라고 표시된 음성을 다운로드하실 수 있습니다.<br> 이때 해당 고음질 음성(Lisa(LE))을 선택하면 미리듣기
+                        음성과는 달리 앱 내에서 재생하면 부자연스러운 음성이 재생되고 있습니다. 한국어도 마찬가지로 두리(LE) (여성) 음성을 선택하면 기계음이 다소 섞여 재생됩니다. 이 점 양해해 삼성 TTS 엔진 사용 시에는 영어(여성), 한국어(여성 or 여성 고음질)을 선택해 사용하시는 것을 권장드립니다.<br>
+                        <br>
+                        <Br> 기기의 기본 음성합성 목소리를 변경하는 방법은 다음을 참고해주시기 바랍니다.<br><br>- 삼성전자(갤럭시) : 설정 > 일반 > 글자 읽어주기<br>- LG전자 : 설정 > 접근성 > 텍스트 읽어주기 > 켜진 상태에서 하단 설정 >TTS(텍스트 음성 변환) 설정<br>* 소프트웨어 버전에 따라 상이할 수 있습니다. 다른 제조사 단말이나 설정 방법이 다른 경우 인터넷에 검색해주세요.<br>
+                        <Br> 메모디는 여러분의 암기학습에 더 많은 도움을 드릴 수 있도록 노력하겠습니다. 감사합니다 :)</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Memody 앱 출시 안내</span><span class="icon" aria-hidden="true"></span></button>
+                <div class="accordion-content">
+                    <p>안녕하세요. 당신의 암기 메이트, memody 개발자입니다.<br> 메모디가 이렇게 여러분과 만날 수 있게 되어 기쁩니다:)<br>메모디는 당신의 암기학습을 도와드리고자 등장했습니다.<br><br> 1. 과목별로, 단원별로 차곡차곡<br>메모디는 과목을 먼저 추가하고 그 안에 카테고리까지 더 추가할 수 있습니다. 암기 카드들은 카테고리 안에 만들어집니다. 공부하는 과목과 단원별로 암기카드를 나누어 더 체계적으로
+                        학습해보세요.
+                        <br>
+                        <Br> 2. 스스로 확인하는 암기 학습<br> 카드 리스트 화면 오른쪽 하단에 있는 플레이 버튼을 누르면 암기 학습이 시작됩니다. 암기학습이 시작되면 설정해둔 질문을 보고 답변을 떠올려야 합니다. 화면을 클릭하면 정답카드나 다음 카드로 전환되며 암기상태에 따라 암기 상태를 3단계로 구분하여 표시해둘 수 있습니다.
+                        <br><br> 3. 차근차근 3단계 암기<br>암기카드별로 암기 상태를 설정할 수 있습니다. 암기 상태는 '암기 안 함', '다시 확인', '암기 완료' 3단계로 구분됩니다. 카드 리스트에서 암기 상태를 클릭해 변경할 수 있고, 암기학습시에도 3개의 버튼 중 하나를 눌러 표시할 수 있습니다. 우측 상단 스피커 버튼을 눌러 읽기기능을 활성화하면 문제를 읽어줍니다. 영어 단어를 외울때 유용하게 사용해보세요.
+                        <br><br> 4. 꿈을 위한 목표 설정, 디데이<br>메모디에서는 여러분이 목표를 설정하고 체계적으로 학습할 수 있도록 메인화면에 디데이를 설정할 수 있습니다. 공부중인 시험 날짜를 설정해 시험까지 남은 기간도 메모디에서 확인해보세요.
+                        <br><br>5. 메모디는 여러분과 함께 성장합니다.<br>여러분의 학습에 조금 더 도움이 될 수 있도록 메모디는 여러분과 함께 계속 성장해나갈 예정입니다! 개선사항이나 아이디어가 있으면 언제든지 알려주세요.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+    * {
+        box-sizing: border-box;
+    }
+    
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .accordion .accordion-item {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .accordion .accordion-item button[aria-expanded=true] {
+        border-bottom: 1px solid #03b5d2;
+    }
+    
+    .accordion button {
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 1em 0;
+        color: #7288a2;
+        font-size: 1.15rem;
+        font-weight: 400;
+        border: none;
+        background: none;
+        outline: none;
+    }
+    
+    .accordion button:hover,
+    .accordion button:focus {
+        cursor: pointer;
+        color: #03b5d2;
+    }
+    
+    .accordion button:hover::after,
+    .accordion button:focus::after {
+        cursor: pointer;
+        color: #03b5d2;
+        border: 1px solid #03b5d2;
+    }
+    
+    .accordion button .accordion-title {
+        padding: 1em 1.5em 1em 0;
+    }
+    
+    .accordion button .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid;
+        border-radius: 22px;
+    }
+    
+    .accordion button .icon::before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: currentColor;
+    }
+    
+    .accordion button .icon::after {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: currentColor;
+    }
+    
+    .accordion button[aria-expanded=true] {
+        color: #03b5d2;
+    }
+    
+    .accordion button[aria-expanded=true] .icon::after {
+        width: 0;
+    }
+    
+    .accordion button[aria-expanded=true]+.accordion-content {
+        opacity: 1;
+        max-height: 100%;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+    }
+    
+    .accordion .accordion-content {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, max-height 200ms linear;
+        will-change: opacity, max-height;
+    }
+    
+    .accordion .accordion-content p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 2em 0;
+    }
+</style>
+<script>
+    const items = document.querySelectorAll(".accordion button");
+
+    function toggleAccordion() {
+        const itemToggle = this.getAttribute('aria-expanded');
+
+        for (i = 0; i < items.length; i++) {
+            items[i].setAttribute('aria-expanded', 'false');
+        }
+
+        if (itemToggle == 'false') {
+            this.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
+
+</html>
